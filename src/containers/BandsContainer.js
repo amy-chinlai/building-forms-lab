@@ -13,16 +13,20 @@ class BandsContainer extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return{
-    bands: this.bands
-  }
-}
+// const mapStateToProps = state => {
+//   return{
+//     bands: bands
+//   }
+// }
+
+const mapStateToProps = ({ bands }) => ({ bands }) // what is the difference between this and the above when the above doesn't work?
+
 
 const mapDispatchToProps = dispatch => {
   return{
     addBand: formData => dispatch({ type: "ADD_BAND", payload: formData})
   }
 }
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(BandsContainer)
