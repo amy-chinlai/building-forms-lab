@@ -13,13 +13,13 @@ class BandsContainer extends Component {
   }
 }
 
-// const mapStateToProps = state => {
-//   return{
-//     bands: bands
-//   }
-// }
+const mapStateToProps = {bands} => {
+  return{
+    bands: bands
+  }
+}
 
-const mapStateToProps = ({ bands }) => ({ bands }) // what is the difference between this and the above when the above doesn't work?
+// const mapStateToProps = ({ bands }) => ({ bands }) // what is the difference between this and the above when the above doesn't work? state not needed
 
 
 const mapDispatchToProps = dispatch => {
